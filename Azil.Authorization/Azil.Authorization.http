@@ -1,0 +1,6 @@
+@Azil.Authorization_HostAddress = http://localhost:5223
+
+GET {{Azil.Authorization_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+@Azil.Animals_HostAddress = http://localhost:5135
+
+GET {{Azil.Animals_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
