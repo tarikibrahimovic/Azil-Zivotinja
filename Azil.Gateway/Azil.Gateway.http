@@ -1,0 +1,6 @@
+@Azil.Gateway_HostAddress = http://localhost:5212
+
+GET {{Azil.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

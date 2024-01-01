@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azil.Authorization", "Azil.Authorization\Azil.Authorization.csproj", "{7370834E-35B0-4EC8-B3CD-AA363A5EA21C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azil.Animals", "Azil.Animals\Azil.Animals.csproj", "{367C08F9-9E53-411D-A4B1-993A473CF80B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azil.Animals", "Azil.Animals\Azil.Animals.csproj", "{367C08F9-9E53-411D-A4B1-993A473CF80B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azil.Gateway", "Azil.Gateway\Azil.Gateway.csproj", "{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{367C08F9-9E53-411D-A4B1-993A473CF80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367C08F9-9E53-411D-A4B1-993A473CF80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367C08F9-9E53-411D-A4B1-993A473CF80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,8 @@
-﻿using Azil.Animals.Models;
+﻿using Azil.Gateway.Models;
 
-namespace Azil.Animals.DTOs
+namespace Azil.Gateway.DTOs.Animal
 {
-    public class AnimaRegisterDto
+    public class AnimalRegisterDto
     {
         public AnimalType AnimalType { get; set; } = AnimalType.Other;
         public string Name { get; set; } = string.Empty;

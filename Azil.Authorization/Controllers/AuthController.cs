@@ -57,32 +57,15 @@ namespace Azil.Authorization.Controllers
                 return BadRequest("Wrong password.");
             }
 
-            string token = CreateToken(user);
-
-            return Ok(new {token = token});
-        }
-
-        private string CreateToken(User user)
-        {
-            List<Claim> claims = new List<Claim>
+            UserDto userDto = new UserDto
             {
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.Role, user.Role.ToString())
+                Id = user.Id,
+                Username = user.Username,
+                Email = user.Email,
+                Role = user.Role
             };
 
-            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
-                _configuration.GetSection("AppSettings:Token").Value));
-
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-
-            var token = new JwtSecurityToken(
-                claims: claims,
-                expires: DateTime.Now.AddDays(1),
-                signingCredentials: creds);
-
-            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-
-            return jwt;
+            return Ok(userDto);
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

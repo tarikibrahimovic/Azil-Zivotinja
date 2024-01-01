@@ -1,6 +1,6 @@
-﻿namespace Azil.Animals.Models
+﻿namespace Azil.Gateway.Models
 {
-    public enum AnimalType { Dog, Cat, Bird, Fish, Reptile, Rodent, Other}
+    public enum AnimalType { Dog, Cat, Bird, Fish, Reptile, Rodent, Other }
     public class Animal
     {
         public int Id { get; set; }
