@@ -7,5 +7,6 @@ namespace Azil.Animals.Services
     {
         Animal RegisterAnimal(AnimalRegisterDto request);
         List<Animal> GetAllAnimals();
+        Animal CheckAnimal(int id);
     }
 }

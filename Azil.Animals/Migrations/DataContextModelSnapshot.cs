@@ -23,27 +23,27 @@ namespace Azil.Animals.Migrations
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("Azil.Animals.Models.Animal", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AnimalType")
-                        .HasColumnType("integer");
+                b.Property<int>("AnimalType")
+                    .HasColumnType("integer");
 
-                    b.Property<DateTime>("EntryDate")
-                        .HasColumnType("timestamp with time zone");
+                b.Property<DateTime>("EntryDate")
+                    .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasColumnType("text");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Animals");
-                });
+                b.ToTable("Animals");
+            });
 #pragma warning restore 612, 618
         }
     }

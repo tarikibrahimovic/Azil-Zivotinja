@@ -35,5 +35,15 @@ namespace Azil.Animals.Services
 
             return animal;
         }
+
+        public Animal CheckAnimal(int id)
+        {
+            Animal animal = _context.Animals.FirstOrDefault(a => a.Id == id);
+            if (animal == null)
+            {
+                return null;
+            }
+            return animal;
+        }
     }
 }

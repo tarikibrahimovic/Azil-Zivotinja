@@ -29,5 +29,17 @@ namespace Azil.Animals.Controllers
             var animals = _animalService.GetAllAnimals();
             return Ok(animals);
         }
+
+        [HttpGet("check-animal/{id}")]
+        public ActionResult<Animal> CheckAnimal(int id)
+        {
+            var animal = _animalService.CheckAnimal(id);
+            if(animal == null)
+            {
+                return NotFound();
+            }
+            return Ok(animal);
+        }
+        
     }
 }
