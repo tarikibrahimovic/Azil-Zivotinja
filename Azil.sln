@@ -7,7 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azil.Authorization", "Azil.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azil.Animals", "Azil.Animals\Azil.Animals.csproj", "{367C08F9-9E53-411D-A4B1-993A473CF80B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azil.Gateway", "Azil.Gateway\Azil.Gateway.csproj", "{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azil.Gateway", "Azil.Gateway\Azil.Gateway.csproj", "{207F5AFE-CE88-4F64-91C9-9DB0C9BF1846}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{DE510D60-5672-43A7-8965-F85750F84040}"
+	ProjectSection(SolutionItems) = preProject
+		deployment-np-srv.yaml = deployment-np-srv.yaml
+		deployment.yaml = deployment.yaml
+		local-pvc.yaml = local-pvc.yaml
+		postgres-plat-depl.yaml = postgres-plat-depl.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

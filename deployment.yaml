@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azil-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azil
+  template:
+    metadata:
+      labels:
+        app: azil
+    spec:
+      containers:
+        - name: azil
+          image: azil.auth:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          env:
+            - name: ConnectionStrings__DefaultConnection
+              value: "Host=postgres-service;Port=5432;Database=bus_station_users;Username=admin;Password=admin;"

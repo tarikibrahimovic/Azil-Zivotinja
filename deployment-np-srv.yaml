@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: deployment-np-srv
+spec:
+    type: NodePort
+    selector:
+        app: azil
+    ports:
+        - name: deployment-np-port
+          protocol: TCP
+          port: 80
+          targetPort: 80
+    
