@@ -15,6 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{DE510D60-567
 		deployment.yaml = deployment.yaml
 		local-pvc.yaml = local-pvc.yaml
 		postgres-plat-depl.yaml = postgres-plat-depl.yaml
+		postgres-config.yaml = postgres-config.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostgreSQL", "PostgreSQL", "{30163F58-1F21-4517-B2E7-95588B801EA0}"
+	ProjectSection(SolutionItems) = preProject
+		postgres-config.yaml = postgres-config.yaml
+		postgres-deployment.yaml = postgres-deployment.yaml
+		postgres-pvc-pv.yaml = postgres-pvc-pv.yaml
+		postgres-service.yaml = postgres-service.yaml
 	EndProjectSection
 EndProject
 Global
@@ -38,6 +47,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30163F58-1F21-4517-B2E7-95588B801EA0} = {DE510D60-5672-43A7-8965-F85750F84040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64A76024-3AD6-4BEE-ACAE-E1FC223182A9}

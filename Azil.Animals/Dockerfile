@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 # Expose the API port
-EXPOSE 81
+EXPOSE 8080
 
 # Set the entry point for the API
 ENTRYPOINT ["dotnet", "Azil.Animals.dll"]
