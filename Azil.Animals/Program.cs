@@ -1,3 +1,4 @@
+using Azil.Animals;
 using Azil.Animals.Broker;
 using Azil.Animals.Context;
 using Azil.Animals.Services;
@@ -37,5 +38,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+DbPreperation.PrepPopulation(app);
 
 app.Run();

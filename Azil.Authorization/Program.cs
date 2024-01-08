@@ -1,3 +1,4 @@
+using Azil.Authorization;
 using Azil.Authorization.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -38,5 +39,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+DbPreperation.PrepPopulation(app);
 
 app.Run();

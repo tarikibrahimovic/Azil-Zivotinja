@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: azil-depl
+  name: azilauth-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: azil
+      app: azilauth
   template:
     metadata:
       labels:
-        app: azil
+        app: azilauth
     spec:
       containers:
-        - name: azil
-          image: azil.auth:latest
+        - name: azilauth
+          image: azilauthorization:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           env:
             - name: ConnectionStrings__DefaultConnection
-              value: "Host=postgres-service;Port=5432;Database=bus_station_users;Username=admin;Password=admin;"
+              value: "Server=postgres;Port=5432;Database=azil_users;User Id=admin;Password=admin"

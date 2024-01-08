@@ -1,0 +1,30 @@
+version: '1.0'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgresds
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    healthcheck:
+      test: ["CMD-SHELL", "sh -c 'pg_isready -U admin'"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+  
+  azil.auth:
+    image: azilauthorization:latest
+    container_name: azil.auth-container
+    ports:
+      - "8080:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=postgres;Port=5432;Database=azil_users;User Id=admin;Password=admin;
+    depends_on:
+      postgres:
+        condition: service_healthy
+    links:
+      - postgres
+    command: ["dotnet", "Azil.Authorization.dll"]

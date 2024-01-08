@@ -11,11 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azil.Gateway", "Azil.Gatewa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{DE510D60-5672-43A7-8965-F85750F84040}"
 	ProjectSection(SolutionItems) = preProject
-		deployment-np-srv.yaml = deployment-np-srv.yaml
-		deployment.yaml = deployment.yaml
-		local-pvc.yaml = local-pvc.yaml
-		postgres-plat-depl.yaml = postgres-plat-depl.yaml
-		postgres-config.yaml = postgres-config.yaml
+		deployment-animals.yaml = deployment-animals.yaml
+		deployment-auth.yaml = deployment-auth.yaml
+		deployment-rabbitmq.yaml = deployment-rabbitmq.yaml
+		rabbitmq-srv.yaml = rabbitmq-srv.yaml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostgreSQL", "PostgreSQL", "{30163F58-1F21-4517-B2E7-95588B801EA0}"
@@ -24,6 +23,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostgreSQL", "PostgreSQL", 
 		postgres-deployment.yaml = postgres-deployment.yaml
 		postgres-pvc-pv.yaml = postgres-pvc-pv.yaml
 		postgres-service.yaml = postgres-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compose", "Compose", "{D04F70A3-35B9-40F7-9F45-C558550D0830}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{13AD5F20-4E03-40A7-B22D-35F438471074}"
+	ProjectSection(SolutionItems) = preProject
+		azilanimals-np-srv.yaml = azilanimals-np-srv.yaml
+		azilauth-np-srv.yaml = azilauth-np-srv.yaml
 	EndProjectSection
 EndProject
 Global
@@ -50,6 +60,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{30163F58-1F21-4517-B2E7-95588B801EA0} = {DE510D60-5672-43A7-8965-F85750F84040}
+		{13AD5F20-4E03-40A7-B22D-35F438471074} = {DE510D60-5672-43A7-8965-F85750F84040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64A76024-3AD6-4BEE-ACAE-E1FC223182A9}
