@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{DE510D60-567
 	ProjectSection(SolutionItems) = preProject
 		deployment-animals.yaml = deployment-animals.yaml
 		deployment-auth.yaml = deployment-auth.yaml
+		deployment-gateway.yaml = deployment-gateway.yaml
+		deployment-go.yaml = deployment-go.yaml
 		deployment-rabbitmq.yaml = deployment-rabbitmq.yaml
 		rabbitmq-srv.yaml = rabbitmq-srv.yaml
 	EndProjectSection
@@ -34,6 +36,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{13AD5F20-4
 	ProjectSection(SolutionItems) = preProject
 		azilanimals-np-srv.yaml = azilanimals-np-srv.yaml
 		azilauth-np-srv.yaml = azilauth-np-srv.yaml
+		azilgateway-np-srv.yaml = azilgateway-np-srv.yaml
+		azilgo-np-srv.yaml = azilgo-np-srv.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MongoDB", "MongoDB", "{4836ECE2-8513-4C91-A51E-AAD1053733EA}"
+	ProjectSection(SolutionItems) = preProject
+		deployment-mongo.yaml = deployment-mongo.yaml
+		mongo-pvc.yaml = mongo-pvc.yaml
+		mongo-srv.yaml = mongo-srv.yaml
 	EndProjectSection
 EndProject
 Global
@@ -61,6 +72,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{30163F58-1F21-4517-B2E7-95588B801EA0} = {DE510D60-5672-43A7-8965-F85750F84040}
 		{13AD5F20-4E03-40A7-B22D-35F438471074} = {DE510D60-5672-43A7-8965-F85750F84040}
+		{4836ECE2-8513-4C91-A51E-AAD1053733EA} = {DE510D60-5672-43A7-8965-F85750F84040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64A76024-3AD6-4BEE-ACAE-E1FC223182A9}

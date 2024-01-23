@@ -18,9 +18,16 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "0.5"
+              memory: "500Mi"
           env:
             - name: ConnectionStrings__DefaultConnection
-              value: "Server=postgres;Port=5432;Database=azil_animals;User Id=admin;Password=admin"
+              value: "Host=postgres-service;Port=5432;Database=azil_animals;Username=admin;Password=admin"
             - name: MessageBroker__HostName
               value: rabbitmq-srv
             - name: MessageBroker__Port

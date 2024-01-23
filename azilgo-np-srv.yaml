@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: azilgo-np-srv
+spec:
+    type: NodePort
+    selector:
+        app: azilgo
+    ports:
+        - name: azilgo-service
+          protocol: TCP
+          port: 8082
+          targetPort: 8080

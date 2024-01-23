@@ -9,7 +9,7 @@ using System.Text;
 namespace Azil.Gateway.Controllers
 {
     [Route("[controller]")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,User")]
     public class AnimalController : ControllerBase
     {
         private readonly HttpClient httpClient;

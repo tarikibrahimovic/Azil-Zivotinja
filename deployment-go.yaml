@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: azilauth-depl
+  name: azilgo-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: azilauth
+      app: azilgo
   template:
     metadata:
       labels:
-        app: azilauth
+        app: azilgo
     spec:
       containers:
-        - name: azilauth
-          image: azilauthorization:latest
+        - name: azilgo
+          image: azilgo:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -26,5 +26,6 @@ spec:
               cpu: "0.5"
               memory: "500Mi"
           env:
-            - name: ConnectionStrings__DefaultConnection
-              value: "Host=postgres-service;Port=5432;Database=azil_users;Username=admin;Password=admin"
+            - name: MONGOURI
+              value: "mongodb://mongodb-service:27017"
+            
